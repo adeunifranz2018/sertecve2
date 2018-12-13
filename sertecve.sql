@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 07-12-2018 a las 15:30:53
+-- Tiempo de generación: 14-12-2018 a las 00:42:44
 -- Versión del servidor: 10.1.26-MariaDB
 -- Versión de PHP: 7.1.8
 
@@ -21,6 +21,8 @@ SET time_zone = "+00:00";
 --
 -- Base de datos: `sertecve`
 --
+CREATE DATABASE IF NOT EXISTS `sertecve` DEFAULT CHARACTER SET utf8 COLLATE utf8_spanish_ci;
+USE `sertecve`;
 
 -- --------------------------------------------------------
 
@@ -399,18 +401,12 @@ CREATE TABLE `tblcliente` (
   `emacli` varchar(255) COLLATE utf8_spanish_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
 
--- --------------------------------------------------------
-
 --
--- Estructura de tabla para la tabla `tblestado`
+-- Volcado de datos para la tabla `tblcliente`
 --
 
-CREATE TABLE `tblestado` (
-  `id_est` int(11) NOT NULL,
-  `iniest` date NOT NULL,
-  `finest` date NOT NULL,
-  `resest` text COLLATE utf8_spanish_ci NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
+INSERT INTO `tblcliente` (`id_cli`, `cidcli`, `nomcli`, `apecli`, `telcli`, `dircli`, `emacli`) VALUES
+(1, '4587852', 'CARMELO', 'GAVINCHA', 71515155, 'EL ALTO\r\nLA PAZ', 'carmelogavincha@gmail.com');
 
 -- --------------------------------------------------------
 
@@ -472,6 +468,62 @@ CREATE TABLE `tblrepuesto` (
   `prerep` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
 
+--
+-- Volcado de datos para la tabla `tblrepuesto`
+--
+
+INSERT INTO `tblrepuesto` (`id_rep`, `nomrep`, `desrep`, `entrep`, `canrep`, `prerep`) VALUES
+(2, 'item Nº 1', 'descripcion', '2018-12-13', 100, 10),
+(3, 'item Nº 2', 'descripcion', '2018-12-13', 100, 10),
+(4, 'item Nº 3', 'descripcion', '2018-12-13', 100, 10),
+(5, 'item Nº 4', 'descripcion', '2018-12-13', 100, 10),
+(6, 'item Nº 5', 'descripcion', '2018-12-13', 100, 10),
+(7, 'item Nº 6', 'descripcion', '2018-12-13', 100, 10),
+(8, 'item Nº 7', 'descripcion', '2018-12-13', 100, 10),
+(9, 'item Nº 8', 'descripcion', '2018-12-13', 100, 10),
+(10, 'item Nº 9', 'descripcion', '2018-12-13', 100, 10),
+(11, 'item Nº 10', 'descripcion', '2018-12-13', 100, 10),
+(12, 'item Nº 11', 'descripcion', '2018-12-13', 100, 10),
+(13, 'item Nº 12', 'descripcion', '2018-12-13', 100, 10),
+(14, 'item Nº 13', 'descripcion', '2018-12-13', 100, 10),
+(15, 'item Nº 14', 'descripcion', '2018-12-13', 100, 10),
+(16, 'item Nº 15', 'descripcion', '2018-12-13', 100, 10),
+(17, 'item Nº 16', 'descripcion', '2018-12-13', 100, 10),
+(18, 'item Nº 17', 'descripcion', '2018-12-13', 100, 10),
+(19, 'item Nº 18', 'descripcion', '2018-12-13', 100, 10),
+(20, 'item Nº 19', 'descripcion', '2018-12-13', 100, 10),
+(21, 'item Nº 20', 'descripcion', '2018-12-13', 100, 10),
+(22, 'item Nº 21', 'descripcion', '2018-12-13', 100, 10),
+(23, 'item Nº 22', 'descripcion', '2018-12-13', 100, 10),
+(24, 'item Nº 23', 'descripcion', '2018-12-13', 100, 10),
+(25, 'item Nº 24', 'descripcion', '2018-12-13', 100, 10),
+(26, 'item Nº 25', 'descripcion', '2018-12-13', 100, 10),
+(27, 'item Nº 26', 'descripcion', '2018-12-13', 100, 10),
+(28, 'item Nº 27', 'descripcion', '2018-12-13', 100, 10),
+(29, 'item Nº 28', 'descripcion', '2018-12-13', 100, 10),
+(30, 'item Nº 29', 'descripcion', '2018-12-13', 100, 10),
+(31, 'item Nº 30', 'descripcion', '2018-12-13', 100, 10),
+(32, 'item Nº 31', 'descripcion', '2018-12-13', 100, 10),
+(33, 'item Nº 32', 'descripcion', '2018-12-13', 100, 10),
+(34, 'item Nº 33', 'descripcion', '2018-12-13', 100, 10),
+(35, 'item Nº 34', 'descripcion', '2018-12-13', 100, 10),
+(36, 'item Nº 35', 'descripcion', '2018-12-13', 100, 10),
+(37, 'item Nº 36', 'descripcion', '2018-12-13', 100, 10),
+(38, 'item Nº 37', 'descripcion', '2018-12-13', 100, 10),
+(39, 'item Nº 38', 'descripcion', '2018-12-13', 100, 10),
+(40, 'item Nº 39', 'descripcion', '2018-12-13', 100, 10),
+(41, 'item Nº 40', 'descripcion', '2018-12-13', 100, 10),
+(42, 'item Nº 41', 'descripcion', '2018-12-13', 100, 10),
+(43, 'item Nº 42', 'descripcion', '2018-12-13', 100, 10),
+(44, 'item Nº 43', 'descripcion', '2018-12-13', 100, 10),
+(45, 'item Nº 44', 'descripcion', '2018-12-13', 100, 10),
+(46, 'item Nº 45', 'descripcion', '2018-12-13', 100, 10),
+(47, 'item Nº 46', 'descripcion', '2018-12-13', 100, 10),
+(48, 'item Nº 47', 'descripcion', '2018-12-13', 100, 10),
+(49, 'item Nº 48', 'descripcion', '2018-12-13', 100, 10),
+(50, 'item Nº 49', 'descripcion', '2018-12-13', 100, 10),
+(51, 'item Nº 50', 'descripcion', '2018-12-13', 100, 10);
+
 -- --------------------------------------------------------
 
 --
@@ -481,9 +533,21 @@ CREATE TABLE `tblrepuesto` (
 CREATE TABLE `tblrepuestosu` (
   `id_reu` int(11) NOT NULL,
   `repreu` int(11) NOT NULL,
+  `canreu` int(11) NOT NULL,
   `fecreu` date NOT NULL,
-  `estreu` int(11) NOT NULL
+  `trareu` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
+
+--
+-- Volcado de datos para la tabla `tblrepuestosu`
+--
+
+INSERT INTO `tblrepuestosu` (`id_reu`, `repreu`, `canreu`, `fecreu`, `trareu`) VALUES
+(1, 1, 0, '2018-12-12', 1),
+(5, 2, 2, '2018-12-13', 1),
+(6, 2, 2, '2018-12-13', 1),
+(7, 3, 2, '2018-12-13', 1),
+(8, 4, 2, '2018-12-13', 1);
 
 -- --------------------------------------------------------
 
@@ -497,6 +561,13 @@ CREATE TABLE `tblservicio` (
   `preser` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
 
+--
+-- Volcado de datos para la tabla `tblservicio`
+--
+
+INSERT INTO `tblservicio` (`id_ser`, `desser`, `preser`) VALUES
+(1, 'CAMBIO DE FILTRO DE AIRE', 20);
+
 -- --------------------------------------------------------
 
 --
@@ -507,8 +578,40 @@ CREATE TABLE `tblserviciou` (
   `id_seu` int(11) NOT NULL,
   `serseu` int(11) NOT NULL,
   `fecseu` date NOT NULL,
-  `estseu` int(11) NOT NULL
+  `traseu` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
+
+--
+-- Volcado de datos para la tabla `tblserviciou`
+--
+
+INSERT INTO `tblserviciou` (`id_seu`, `serseu`, `fecseu`, `traseu`) VALUES
+(1, 1, '2018-12-12', 2),
+(2, 1, '2018-12-12', 2),
+(4, 1, '2018-12-12', 3),
+(5, 1, '2018-12-13', 4);
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `tbltrabajo`
+--
+
+CREATE TABLE `tbltrabajo` (
+  `id_tra` int(11) NOT NULL,
+  `vehtra` int(11) NOT NULL,
+  `esttra` varchar(255) COLLATE utf8_spanish_ci NOT NULL,
+  `initra` date NOT NULL,
+  `fintra` date NOT NULL,
+  `restra` text COLLATE utf8_spanish_ci NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
+
+--
+-- Volcado de datos para la tabla `tbltrabajo`
+--
+
+INSERT INTO `tbltrabajo` (`id_tra`, `vehtra`, `esttra`, `initra`, `fintra`, `restra`) VALUES
+(1, 1, '1', '2018-12-12', '2018-12-13', '-');
 
 -- --------------------------------------------------------
 
@@ -528,6 +631,13 @@ CREATE TABLE `tblvehiculo` (
   `traveh` varchar(255) COLLATE utf8_spanish_ci NOT NULL,
   `proveh` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
+
+--
+-- Volcado de datos para la tabla `tblvehiculo`
+--
+
+INSERT INTO `tblvehiculo` (`id_veh`, `plaveh`, `marveh`, `tipveh`, `modveh`, `chaveh`, `colveh`, `pueveh`, `traveh`, `proveh`) VALUES
+(1, '1256-UGC', 'TOYOTA', 'MINIBUS', 2018, 'JSKJLK3JKL4L4LL', 'ROJO', 5, 'INYECCION', 1);
 
 -- --------------------------------------------------------
 
@@ -625,12 +735,6 @@ ALTER TABLE `tblcliente`
   ADD PRIMARY KEY (`id_cli`);
 
 --
--- Indices de la tabla `tblestado`
---
-ALTER TABLE `tblestado`
-  ADD PRIMARY KEY (`id_est`);
-
---
 -- Indices de la tabla `tblfactura`
 --
 ALTER TABLE `tblfactura`
@@ -673,6 +777,12 @@ ALTER TABLE `tblserviciou`
   ADD PRIMARY KEY (`id_seu`);
 
 --
+-- Indices de la tabla `tbltrabajo`
+--
+ALTER TABLE `tbltrabajo`
+  ADD PRIMARY KEY (`id_tra`);
+
+--
 -- Indices de la tabla `tblvehiculo`
 --
 ALTER TABLE `tblvehiculo`
@@ -708,12 +818,7 @@ ALTER TABLE `tblcita`
 -- AUTO_INCREMENT de la tabla `tblcliente`
 --
 ALTER TABLE `tblcliente`
-  MODIFY `id_cli` int(11) NOT NULL AUTO_INCREMENT;
---
--- AUTO_INCREMENT de la tabla `tblestado`
---
-ALTER TABLE `tblestado`
-  MODIFY `id_est` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id_cli` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 --
 -- AUTO_INCREMENT de la tabla `tblfactura`
 --
@@ -733,27 +838,32 @@ ALTER TABLE `tblpersonal`
 -- AUTO_INCREMENT de la tabla `tblrepuesto`
 --
 ALTER TABLE `tblrepuesto`
-  MODIFY `id_rep` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id_rep` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=52;
 --
 -- AUTO_INCREMENT de la tabla `tblrepuestosu`
 --
 ALTER TABLE `tblrepuestosu`
-  MODIFY `id_reu` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id_reu` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 --
 -- AUTO_INCREMENT de la tabla `tblservicio`
 --
 ALTER TABLE `tblservicio`
-  MODIFY `id_ser` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id_ser` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 --
 -- AUTO_INCREMENT de la tabla `tblserviciou`
 --
 ALTER TABLE `tblserviciou`
-  MODIFY `id_seu` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id_seu` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+--
+-- AUTO_INCREMENT de la tabla `tbltrabajo`
+--
+ALTER TABLE `tbltrabajo`
+  MODIFY `id_tra` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 --
 -- AUTO_INCREMENT de la tabla `tblvehiculo`
 --
 ALTER TABLE `tblvehiculo`
-  MODIFY `id_veh` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id_veh` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 --
 -- AUTO_INCREMENT de la tabla `tblventa`
 --
